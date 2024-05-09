@@ -1,20 +1,54 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="dark">
+    <ion-title color="success">
+    Programming
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-text color="success">
+        <p>Entre os valore abaixo:</p>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label color="success" position="stacked">Valor 1:</ion-label>
+        <ion-text color="light">
+          <ion-input [(ngModel)]="valor1"> </ion-input>
+        </ion-text>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label color="success" position="stacked">Valor 2:</ion-label>
+        <ion-text color="light">
+          <ion-input [(ngModel)]="valor2"></ion-input>
+        </ion-text>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button color="success" (click)="calc()">CALCULAR</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label color="success">Resultado:</ion-label>
+        <ion-text color="light">
+          <ion-input disabled="true" [value]="exibirResultado()"></ion-input>
+        </ion-text>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
